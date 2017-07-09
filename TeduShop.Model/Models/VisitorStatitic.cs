@@ -8,16 +8,15 @@ using System.Threading.Tasks;
 
 namespace TeduShop.Model.Models
 {
-    [Table("Tags")]
-    public class Tag
+    [Table("VisitorStatics")]
+    public class VisitorStatitic
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid ID { set; get; }
         [Required]
-        public string ID { set; get; }
-        public string Name { set; get; }
-        public string Type { set; get; }
-
-        public virtual IEnumerable<ProductTag> Products { set; get; }
-        public virtual IEnumerable<PostTag> Post { set; get; }
+        public DateTime VisitedDate { set; get; }
+        [Required]
+        public string IPAddress { set; get; }
     }
 }

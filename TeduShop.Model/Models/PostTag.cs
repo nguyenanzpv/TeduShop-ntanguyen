@@ -8,16 +8,19 @@ using System.Threading.Tasks;
 
 namespace TeduShop.Model.Models
 {
-    [Table("Tags")]
-    public class Tag
+    [Table("PostTags")]
+    public class PostTag
     {
         [Key]
+        public int PostID { set; get; }
+        [Key]
         [Required]
-        public string ID { set; get; }
-        public string Name { set; get; }
-        public string Type { set; get; }
+        public string TagID { set; get; }
 
-        public virtual IEnumerable<ProductTag> Products { set; get; }
-        public virtual IEnumerable<PostTag> Post { set; get; }
+        [ForeignKey("PostID")]
+        public virtual Post Post { set; get; }
+        [ForeignKey("TagID")]
+        public virtual Tag Tag { set; get; }
+
     }
 }

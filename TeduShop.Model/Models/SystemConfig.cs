@@ -8,16 +8,15 @@ using System.Threading.Tasks;
 
 namespace TeduShop.Model.Models
 {
-    [Table("Tags")]
-    public class Tag
+    [Table("SystemConfigs")]
+    public class SystemConfig
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { set; get; }
         [Required]
-        public string ID { set; get; }
-        public string Name { set; get; }
-        public string Type { set; get; }
-
-        public virtual IEnumerable<ProductTag> Products { set; get; }
-        public virtual IEnumerable<PostTag> Post { set; get; }
+        public string Code { set; get; }
+        public string Valuestring { set; get; }
+        public int ValueInt { set; get; }
     }
 }

@@ -35,6 +35,8 @@ namespace TeduShop.Model.Models
 
         [ForeignKey("CategoryID")]
         public virtual ProductCategory ProductCategory { set; get; }
-        public virtual IEnumerable<ProductTag> ProductTagss { set; get; }
+        public virtual IEnumerable<ProductTag> Tags { set; get; }
+
+        public virtual IEnumerable<OrderDetail> Orders { set; get; }
     }
 }
