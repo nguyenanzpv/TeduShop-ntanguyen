@@ -17,6 +17,7 @@ namespace TeduShop.Model.Models
         [Required]
         public DateTime VisitedDate { set; get; }
         [Required]
+        [MaxLength(50)]
         public string IPAddress { set; get; }
     }
 }

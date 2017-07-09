@@ -15,8 +15,11 @@ namespace TeduShop.Model.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
         [Required]
+        [MaxLength(50)]
+        [Column(TypeName ="varchar")]
         public string Code { set; get; }
+        [MaxLength(50)]
         public string Valuestring { set; get; }
-        public int ValueInt { set; get; }
+        public int? ValueInt { set; get; }
     }
 }

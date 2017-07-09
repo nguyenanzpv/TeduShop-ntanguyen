@@ -13,11 +13,16 @@ namespace TeduShop.Model.Models
     {
         [Key]
         [Required]
+        [MaxLength(50)]
         public string ID { set; get; }
+        [MaxLength(50)]
+        [Required]
         public string Name { set; get; }
+        [MaxLength(50)]
+        [Required]
         public string Type { set; get; }
 
-        public virtual IEnumerable<ProductTag> Products { set; get; }
-        public virtual IEnumerable<PostTag> Post { set; get; }
+        //public virtual IEnumerable<ProductTag> Products { set; get; }
+        //public virtual IEnumerable<PostTag> Post { set; get; }
     }
 }

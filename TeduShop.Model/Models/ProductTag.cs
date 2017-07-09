@@ -14,7 +14,8 @@ namespace TeduShop.Model.Models
         [Key]
         public int ProductID { set; get; }
         [Key]
-        [Required]
+        [MaxLength(50)]
+        [Column(TypeName ="varchar")]
         public string TagID { set; get; }
 
         [ForeignKey("ProductID")]

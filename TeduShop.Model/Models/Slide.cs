@@ -15,14 +15,18 @@ namespace TeduShop.Model.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
         [Required]
+        [MaxLength(256)]
         public string Name { set; get; }
+        [MaxLength(256)]
         public string Description { set; get; }
+        [MaxLength(256)]
         [Required]
         public string Image { set; get; }
         [Required]
+        [MaxLength(256)]
         public string URL { set; get; }
         public int? DisplayOrder { set; get; }
-        [Required]
+        
         public bool Status { set; get; }
     }
 }
