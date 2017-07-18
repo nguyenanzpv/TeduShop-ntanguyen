@@ -14,6 +14,7 @@ namespace TeduShop.Model.Models
         [Key]
         [Required]
         [MaxLength(50)]
+        [Column(TypeName ="varchar")]
         public string ID { set; get; }
         [MaxLength(50)]
         [Required]

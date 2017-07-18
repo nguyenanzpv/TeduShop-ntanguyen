@@ -19,6 +19,6 @@ namespace TeduShop.Model.Abstracts
 
         string MetaDescription { set; get; }
 
-        bool Statua { set; get; }
+        bool Status { set; get; }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TeduShop.Data.Infrastructure
 {
-    public abstract class RepositoryBase<T> where T:class
+    public abstract class RepositoryBase<T>:IRepository<T> where T:class
     {
         #region Properties
         private TeduShopDbContext dataContext;
@@ -90,5 +90,22 @@ namespace TeduShop.Data.Infrastructure
         {
             return GetAll(includes).FirstOrDefault(expression);
         }
+
+        public IQueryable<T> GetMulti(Expression<Func<T, bool>> predicate, string[] includes = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IQueryable<T> GetMultiPaging(Expression<Func<T, bool>> filter, out int total, int index = 0, int size = 50, string[] includes = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool CheckContains(Expression<Func<T, bool>> predicate)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
+
 }
